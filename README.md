@@ -1,24 +1,20 @@
 # Frontend Mentor - NFT preview card component solution
 
-![](./design/preview.jpg)
-
-This is a solution to the [NFT preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [NFT preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
-- [Frontend Mentor - NFT preview card component solution](#frontend-mentor---nft-preview-card-component-solution)
-  - [Table of contents](#table-of-contents)
-  - [Overview](#overview)
-    - [The challenge](#the-challenge)
-    - [Challenge result](#challenge-result)
-    - [Screenshot](#screenshot)
-    - [Links](#links)
-  - [My process](#my-process)
-    - [Built with](#built-with)
-    - [What I learned](#what-i-learned)
-    - [Continued development](#continued-development)
-  - [Author](#author)
-  - [Acknowledgments](#acknowledgments)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -31,34 +27,22 @@ Users should be able to:
 - View the optimal layout depending on their device's screen size
 - See hover states for interactive elements
 
-### Challenge result
-
-- 18 Sep 2025
-  - ✅ View the optimal layout depending on their device's screen size
-  - ✅ See hover states for interactive elements
-
 ### Screenshot
 
-- Mobile view
+![](./screenshot.jpg)
 
-  <img src="./screenshots/Mobile-view.png" alt="NFT preview card challenge - Mobile view" width="375px">
+Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
-- Desktop view
+Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
 
-  <img src="./screenshots/Desktop-view.png" alt="NFT preview card challenge - Desktop view">
+Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
 
-- Active State view
-
-  <img src="./screenshots/Active-state-view-1.png" alt="NFT preview card challenge - Active state view 1">
-
-  <img src="./screenshots/Active-state-view-2.png" alt="NFT preview card challenge - Active state view 2">
-
-  <img src="./screenshots/Active-state-view-3.png" alt="NFT preview card challenge - Active state view 3">
+**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
-- Solution URL: [NFT Preview Card Component using HTML and CSS](https://www.frontendmentor.io/solutions/test-g1lBi2QCxd)
-- Live Site URL: [Frontend Mentor Challenge | NFT preview card component](https://vangmanawkairung.github.io/frontend-mentor-nft-prview-card-component/)
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
@@ -67,33 +51,61 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
+- CSS Grid
 - Mobile-first workflow
-- Absolute positioning
-- Drop shadow & hover effects
-- Google Fonts (Outfit)
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- [Styled Components](https://styled-components.com/) - For styles
+
+**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-- Learned how to use **pseudo-elements (::before)** together with `position: absolute` and `inset: 0` to create an overlay effect without adding extra HTML tags.
-- Understood the relationship between **position: relative** (as the parent reference point) and **position: absolute** (as the child positioned element). The absolute child aligns to the nearest ancestor with a defined position.
-- Practiced controlling **stacking order** with `z-index` to ensure that the overlay and the icon display correctly when hovering.
-- Discovered that `:hover` must be applied to the **parent container** (e.g., `section.nft-image`) instead of the pseudo-element or the `<img>` itself, to trigger overlay and icon display together.
-- Strengthened understanding of **responsive design** by using a mobile‑first workflow and `@media (min-width: 1024px)` queries to adjust layout and font sizes for larger screens.
-- Improved hover interaction styling for elements like the title (`h1`) and the creator name by changing colors on hover to provide better user feedback.
-- Applied **CSS custom properties (variables)** to manage colors, font sizes, and weights consistently across the project.
+Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+
+To see how you can add code snippets, see below:
+
+```html
+<h1>Some HTML code I'm proud of</h1>
+```
+```css
+.proud-of-this-css {
+  color: papayawhip;
+}
+```
+```js
+const proudOfThisFunc = () => {
+  console.log('🎉')
+}
+```
+
+If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+
+**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-In future development, I would like to:
+Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
-- Implement a feature where clicking on the NFT image expands it into a larger modal view, instead of only showing an overlay icon on hover.
-- Extend the project to support multiple NFT cards, and add navigation controls (such as arrows or a carousel) so users can browse through them interactively.
+**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+
+### Useful resources
+
+- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+
+**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- GitHub: [Kirung Vangmanaw](https://github.com/VangmanawKairung)
-- Frontend Mentor - [@VangmanawKairung](https://www.frontendmentor.io/profile/VangmanawKairunge)
+- Website - [Add your name here](https://www.your-site.com)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+
+**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 
-I would like to sincerely thank myself for staying persistent and continuing to push forward. A big thank you to the **Frontend Mentor team** for creating this challenge and giving me the opportunity to practice and improve my skills. I am also grateful to **OpenAI** and **Google** for developing **ChatGPT** and **Gemini**, which helped me complete this challenge and explore new techniques. A special thanks to **Figma** for providing an intuitive design tool that made translating designs into code much smoother. Lastly, I want to express my appreciation to every tool, program, and source of encouragement that supported me throughout this process. Without them, completing this challenge successfully would not have been possible.
+This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+
+**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
