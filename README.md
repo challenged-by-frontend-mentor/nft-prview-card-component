@@ -46,8 +46,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [NFT Preview Card Component using HTML and CSS](https://www.frontendmentor.io/solutions/test-g1lBi2QCxd)
+- Live Site URL: [Frontend Mentor | NFT preview card component](https://challenged-by-frontend-mentor.github.io/nft-prview-card-component/)
 
 ## My process
 
