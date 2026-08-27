@@ -1,22 +1,24 @@
 # Frontend Mentor - NFT preview card component solution
 
+![](.reference/preview.jpg)
+
 This is a solution to the [NFT preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+- [Frontend Mentor - NFT preview card component solution](#frontend-mentor---nft-preview-card-component-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
+  - [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -29,15 +31,18 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+<details>
+  <summary>Mobile view</summary>
+  <img src='screenshots/mobile-view.png' alt='NFT preview card component challenge - Mobile view' width='375px'>
+</details>
+<details>
+  <summary>Desktop view</summary>
+  <img src='screenshots/desktop-view.png' alt='NFT preview card component challenge - Desktop view'>
+</details>
+<details>
+  <summary>Active state view</summary>
+  <img src='screenshots/active-state-view.png' alt='NFT preview card component challenge - Active state view'>
+</details>
 
 ### Links
 
@@ -48,64 +53,72 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Built with
 
-- Semantic HTML5 markup
+- Semantic HTML5 markup 
 - CSS custom properties
+- CSS Native Nesting
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- BEM Methodology
+- [React](https://react.dev/) - JavaScript library for building UI components  
+- [Vite](https://vite.dev/) - Next Generation Frontend Tooling
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Although I had previously used `position: absolute` quite often, I hadn't truly combined it with `position: relative` on a parent container until this project. I gained a much clearer understanding of how `position: absolute` anchors itself to its nearest positioned ancestor (`position: relative`).
 
-To see how you can add code snippets, see below:
+I applied this concept to build an image hover overlay effect by setting `.card__image-link` to `position: relative` and positioning `.card__overlay` using `position: absolute` with `inset: 0`.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.card__image-link {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
 }
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+.card__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--clr-primary-cyan-400);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card__image-link:hover .card__overlay,
+.card__image-link:focus-visible .card__overlay {
+  opacity: 1;
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+Additionally, I reinforced my knowledge of Semantic HTML structure by organizing layout landmarks correctly (`<main>` wrapping the main page layout, `<article>` for reusable card components, and `<time dateTime="...">` for accessible dates) while maintaining a solid accessibility baseline using `aria-hidden` and `:focus-visible`.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+In future development, I would like to:  
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- Implement a feature where clicking on the NFT image expands it into a larger modal view, instead of only showing an overlay icon on hover.  
+
+- Extend the project to support multiple NFT cards, and add navigation controls (such as arrows or a carousel) so users can browse through them interactively.  
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [MDN Web Docs - Positioning](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Positioning) - Excellent guide for mastering `position: relative` and `position: absolute` layouts.
+  
+- [WAI-ARIA Basics - MDN](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) - Helpful reference for implementing accessibility standards, decorative alt text, and `aria-hidden` attributes.  
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Modern CSS Reset by Andy Bell](https://piccalil.li/blog/a-more-modern-css-reset/) - A practical reference for setting up clean global styles and base resets.  
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- GitHub: [Kairung Vangmanaw](https://github.com/VangmanawKairung)
+- Frontend Mentor - [@VangmanawKairung](https://www.frontendmentor.io/profile/VangmanawKairung)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+I would like to sincerely thank myself for staying persistent and continuing to push forward. A big thank you to the **Frontend Mentor** team for creating this challenge and giving me the opportunity to practice and improve my skills.  
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I am also deeply grateful to **Google Gemini** and **Google Search AI Mode** for serving as my supportive AI collaborators, offering code reviews, verifying accessibility standards, and guiding me through semantic HTML best practices.  
+
+A practical shout-out goes to **macOS Preview**—inspecting design images to check exact pixel values alongside an inline design overlay helped speed up my layout process significantly instead of relying purely on trial and error. Lastly, I want to express my appreciation to every tool and source of encouragement that supported me throughout this process.
