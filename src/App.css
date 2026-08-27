@@ -7,6 +7,7 @@
   --clr-neutral-blue-800: hsl(215, 32%, 27%);
   --clr-neutral-white: hsl(0, 0%, 100%);
   --clr-overlay-bg-color: hsla(178, 100%, 50%, 0.5);
+  --clr-card-shadow: hsl(217, 54%, 8%);
 
   /* Typography */
   --ff-body: "Outfit", sans-serif;
@@ -47,6 +48,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  box-shadow: 0 0 50px var(--clr-card-shadow);
 
   @media (min-width: 1024px) {
     max-width: 350px;
