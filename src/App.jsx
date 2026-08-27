@@ -4,12 +4,12 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="app-layout">
-      <main className="app-layout__main">
+    <>
+      <main className="main-content">
         <Card />
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
 
